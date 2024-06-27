@@ -1,0 +1,265 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.head1{
+    background-color: #fff;
+    height: 70px;
+}
+.headright{
+    float: left;
+}
+.headright h1{
+    padding-top: 10px;
+    color: black;
+}
+.headleft ul li{
+    float: right;
+    padding-right: 30px;
+    padding-top: 15px;
+    list-style: none;
+}
+.bun1{
+    background-color: #fff;
+    color: black;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.bun2{
+    background-color: #fff;
+    color: black;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.headmain{
+    background-image: url("sky.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+}
+.headmain h1{
+    color: #fff;
+    padding-left: 20px;
+    padding-top: 60px;
+    font-size: 50px;
+}
+/*  main */
+
+.main-top{
+    padding-top: 50px;
+    margin: 0px 20px;
+}
+.mainflex{
+    display: flex;
+    justify-content: space-between;
+
+}
+.mainflexleft{
+    padding: 20px 0px;
+}
+.mainflexleft h1{
+    font-size: 40px;
+}
+.mainflexright a{
+    text-decoration: none;
+    background-color: #1a6fa8;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+.mainflexright{
+    margin-top: 70px;
+}
+.servicesmain{
+    margin: 20px;
+}
+.mainbotflex{
+    display: flex;
+    justify-content: space-between;
+}
+.mainbotinn1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mainbotleft img{
+    width: 60px;
+}
+.mainbotleft{
+    margin-right: 20px;
+}
+.mainbotright{
+    padding: 20px 0px;
+}
+.mainbotright h5{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.mainbotright p{
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    color: gray;
+}
+.mainbot2{
+    width: 30%;
+}
+.mainbot1{
+    width: 30%;
+}
+.mainbot3{
+    width: 30%;
+}
+/* prefoot */
+
+.prefoot{
+    background-image: url("empty.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+}
+.prefoot h2{
+    text-align: center;
+    padding-top: 100px;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 100px;
+}
+.prefoot h1{
+    text-align: center;
+    color: #fff;
+    padding: 20px 0px;
+    font-size: 50px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+.prefoot a{
+    text-decoration: none;
+    background-color: #1a6fa8;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-size: 20px;
+    margin-left: 550px;
+}
+
+/* footer */
+
+.foot{
+    background-color: #1a6fa8;
+    height: auto;
+}
+.footflex{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+.footinn1{
+    width: 20%;
+}
+.footinn1 img{
+    width: 150px;
+}
+.footinn1 p{
+    margin: 20px 0px;
+    color: #fff;
+    line-height: 25px;
+    font-size: 19px;
+}
+
+.footinn2 h2{
+    color: #fff;
+    padding-bottom: 10px;
+}
+.footinn2 ul li{
+    list-style: none;
+    padding-bottom: 10px;
+}
+.footinn2 a{
+    text-decoration: none;
+    color: grey;
+    font-size: 20px;
+}
+.footinn2 a:hover{
+    color: #fff;
+    transition: 0.5s;
+}
+
+.footinn3 h2{
+    color: #fff;
+    padding-bottom: 10px;
+}
+.footinn3 ul li{
+    list-style: none;
+    padding-bottom: 10px;
+}
+.footinn3 a{
+    text-decoration: none;
+    color: grey;
+    font-size: 20px;
+}
+.footinn3 a:hover{
+    color: #fff;
+    transition: 0.5s;
+}
+
+.footinn4 h2{
+    color: #fff;
+    padding-bottom: 10px;
+}
+.icon i{
+    color: #fff;
+}
+.iconright{
+    color: gray;
+    font-size: 17px;
+    padding-left: 10px;
+}
+.footinnleft{
+    margin-top: 20px;
+}
+.iconright a{
+    text-decoration: none;
+    color: gray;
+}
+.iconright a:hover{
+    color: #fff;
+    transition: 0.5s;
+}
+
+/* footdown */
+
+.footdown{
+    background-color: #1E3669;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+.footdownleft p{
+    color: #fff;
+    font-size: 18px;
+}
+.footdownleft a{
+    text-decoration: none;
+    color: red;
+}
+.footdownright ul li{
+    list-style: none;
+    display: inline;
+    padding: 10px;
+}
+.footdownright a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+

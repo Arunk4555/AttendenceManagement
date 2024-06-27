@@ -1,0 +1,502 @@
+
+<!-- <div>
+
+  
+    <h1>Attendance Management</h1>
+    <app-attendance-input (addAttendance)="addAttendance($event)"></app-attendance-input>
+    <app-attendance-table [attendanceData]="attendanceData"></app-attendance-table>
+    <app-attendance-export [attendanceData]="attendanceData"></app-attendance-export>
+    <button style="margin: 5px;" class="btn btn-warning" type="button" routerLink="">Logout</button>
+  </div> -->
+
+
+  <!DOCTYPE html>
+  <html>
+     <head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Backon - Dashboard</title>
+        <!-- bootstrap core css
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" /> -->
+        <!-- fonts style 
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+         font awesome style
+        <link href="css/font-awesome.min.css" rel="stylesheet" />
+        Custom styles for this template 
+        <link href="css/style.css" rel="stylesheet" />
+        responsive style 
+        <link href="css/responsive.css" rel="stylesheet" /> -->
+     </head>
+     <body>
+        <!-- header section strats -->
+        <header class="header_section">
+           <div class="container-fluid">
+              <nav class="navbar navbar-expand-lg custom_nav-container ">
+                 <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="#" /></a>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class=""> </span>
+                 </button>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="navbar_inner-nav">
+                       <div class="nav_form">
+                          <form class="form-inline">
+                             <input type="search" placeholder="Search">
+                             <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                             <i class="fa fa-search" aria-hidden="true"></i>
+                             </button>
+                          </form>
+                       </div>
+                       <ul class="navbar-nav nav nav-tabs " id="headerNavTabs" role="tablist">
+                        <li class="nav-item" >
+                           <a class="nav-link" href="" routerLink="" routerLinkActive="active">Home</a>
+                        </li>
+                          <li class="nav-item" >
+                             <a class="nav-link active"  href=" " routerLink="attendence" routerLinkActive="active">Dashboard <span
+                                class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item" >
+                            <a class="nav-link" href=" "  routerLink="/addattendence" >Add Attendance</a>
+                          </li>
+                          <li class="nav-item" >
+                             <a class="nav-link" href=" " routerLink="/attendencetable" routerLinkActive="active">Attendance Table</a>
+                          </li>
+                          <li class="nav-item" >
+                             <a class="nav-link" href="" routerLink="/exportattendance" routerLinkActive="active">Export Attendance</a>
+                          </li>
+                          
+                          
+                       </ul>
+                    </div>
+                 </div>
+                 <div class="quote_btn-container">
+                    <div class="lang_box dropdown">
+                       <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
+                       <img src="images/flag-uk.png" alt="flag" class="mr-2 " title="United Kingdom"> English <i
+                          class="fa fa-angle-down ml-2" aria-hidden="true"></i>
+                       </a>
+                       <div class="dropdown-menu ">
+                          <a href="#" class="dropdown-item">
+                          <img src="images/flag-france.png" class="mr-2" alt="flag">
+                          French
+                          </a>
+                       </div>
+                    </div>
+                    <a href="" class="signup_link">
+                    Sign Up
+                    </a>
+                    <a href="" class="notification_link">
+                    <i class="fa fa-bell" aria-hidden="true"></i>
+                    <span class="notification_number">
+                    01
+                    </span>
+                    </a>
+                    <div class="dropdown">
+                       <a href="" class="user_link" data-toggle="dropdown" aria-expanded="true">
+                          <div class="user_icon">
+                             <i class="fa fa-user" aria-hidden="true"></i>
+                          </div>
+                          <span class="user_name">
+                          Admin
+                          </span>
+                          <div class="dropdown-menu">
+                       <a href="#" class="dropdown-item">
+                       Profile
+                       </a>
+                       <a href="#" class="dropdown-item">
+                       Settings
+                       </a>
+                       <a href="#" class="dropdown-item">
+                       Sign Out
+                       </a>
+                       </div>
+                       </a>
+                    </div>
+                 </div>
+              </nav>
+           </div>
+        </header>
+        <!-- end header section -->
+        <div class="main_content">
+           <div class="container-fluid">
+              <div class="row main_content_row">
+                 <div class="col-xl-2 px-0">
+                    <div class="welcm_sidebar h-100">
+                       <h3 class="welcm-heading fw_600">
+                          Welcome <br>
+                          Dashboard
+                       </h3>
+                       <div class="wlcm_sidebar-content">
+                          <div class="user_info_box wlcm_user_box">
+                             <div class="user_icon">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                             </div>
+                             <h4>
+                                Admin
+                             </h4>
+                             <h6>
+                                Full Stack Developer
+                             </h6>
+                             <a href="">
+                             View Profile
+                             </a>
+                          </div>
+                          <div class="user_earning_box wlcm_user_box">
+                             <i class="fas fa-dollar-sign"></i>
+                             <h5>
+                                Monthly Earning
+                             </h5>
+                             <h5 class="fw_600">
+                                15000.00
+                             </h5>
+                          </div>
+                          <div class="user_project_box wlcm_user_box">
+                             <i class="fas fa-dollar-sign    "></i>
+                             <h5 class="fw_600">
+                                Project Done
+                             </h5>
+                             <div class="img-box mt-3 mb-3">
+                                <img width="180" src="images/project_sell-img.png" alt="">
+                             </div>
+                             <h5>
+                                75% 
+                             </h5>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-xl-10 px-0">
+                    <div class="dash_content">
+                       <div class="tab-content">
+                          <div role="tabpanel" class="tab-pane fade active show" id="dashboardTab">
+                             <div class="container-fluid ">
+                                <div class="row">
+                                   <div class="col-sm-6 col-lg-3 col_Y-padding">
+                                      <div class="status_info_box h-100">
+                                         <div class="img-box">
+                                            <img src="images/status-info1.png" alt="">
+                                         </div>
+                                         <div class="detail-box">
+                                            <p>
+                                               Working days
+                                            </p>
+                                            <h6>
+                                               295
+                                            </h6>
+                                         </div>
+                                      </div>
+                                   </div>
+                                   <div class="col-sm-6 col-lg-3 col_Y-padding">
+                                      <div class="status_info_box h-100">
+                                         <div class="img-box">
+                                            <img src="images/status-info2.png" alt="">
+                                         </div>
+                                         <div class="detail-box">
+                                            <p>
+                                               holidays
+                                            </p>
+                                            <h6>
+                                               25
+                                            </h6>
+                                         </div>
+                                      </div>
+                                   </div>
+                                   <div class="col-sm-6 col-lg-3 col_Y-padding">
+                                      <div class="status_info_box h-100">
+                                         <div class="img-box">
+                                            <img src="images/status-info3.png" alt="">
+                                         </div>
+                                         <div class="detail-box">
+                                            <p>
+                                               Average hours
+                                            </p>
+                                            <h6>
+                                               9
+                                            </h6>
+                                         </div>
+                                      </div>
+                                   </div>
+                                   <div class="col-sm-6 col-lg-3 col_Y-padding">
+                                      <div class="updown_box h-100">
+                                         <h5>
+                                            Days
+                                         </h5>
+                                         <div class="box">
+                                            <div class="detail-box">
+                                               <div class="progress_box pb1">
+                                                  <div class="progress">
+                                                     <div class="progress-bar bg-success" role="progressbar" style="width: 65%"
+                                                        aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                                  </div>
+                                               </div>
+                                               <h5>
+                                                  65
+                                               </h5>
+                                            </div>
+                                            <div class="detail-box">
+                                               <div class="progress_box pb2">
+                                                  <div class="progress">
+                                                     <div class="progress-bar bg-success" role="progressbar" style="width: 85%"
+                                                        aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                                  </div>
+                                               </div>
+                                               <h5>
+                                                  85
+                                               </h5>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="container-fluid ">
+                                <div class="row">
+                                   <div class="col-md-9  col_Y-padding">
+                                      <div class="selling_project_box  h-100">
+                                         <img src="https://media.istockphoto.com/id/1481143128/photo/accountant-black-woman-working-on-laptop-and-do-document-tax-exchange-accounting-and.jpg?s=612x612&w=0&k=20&c=HotStsbRDyfhSm5UTf_g-xoHitTjtuS1gQ9jft8OMxg=">
+                                         <h6>The system collects attendance records in the system and manages, stores and processes the data. It generates daily attendance reports that help the faculty to track student's presence with high accuracy and efficiency Student attendance system helps teachers to mark online attendance of students during class & reduce manual work.
+
+                                          It is used to track student's attendance, absentee record, attendance history & other related documents. Student attendance software allows you to record & manage daily student attendance to speed up the daily attendance process.</h6>
+                                         
+                                      </div>
+                                   </div>
+                                   <div class="col-md-3 col_Y-padding">
+                                      <div class="activity_box h-100">
+                                         <h5 class="fw_600">
+                                            Activity
+                                         </h5>
+                                         <div class="activity_info">
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            <div>
+                                               <h6 class="fw_600">
+                                                  22 Nov
+                                               </h6>
+                                               <p>
+                                                  need Volunteer Activities
+                                               </p>
+                                            </div>
+                                         </div>
+                                         <div class="activity_info">
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            <div>
+                                               <h6 class="fw_600">
+                                                  17 Nov
+                                               </h6>
+                                               <p>
+                                                  why a new common e more
+                                               </p>
+                                            </div>
+                                         </div>
+                                         <div class="activity_info">
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            <div>
+                                               <h6 class="fw_600">
+                                                  15 Nov
+                                               </h6>
+                                               <p>
+                                                  Joined the group Boardsmanship Forum”
+                                               </p>
+                                            </div>
+                                         </div>
+                                         <div class="activity_info">
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            <div>
+                                               <h6 class="fw_600">
+                                                  12 Nov
+                                               </h6>
+                                               <p>
+                                                  Responded to need “In-Kind Opportunity”
+                                               </p>
+                                            </div>
+                                         </div>
+                                         <div class="activity_info">
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            <div>
+                                               <h6 class="fw_600">
+                                                  22 Nov
+                                               </h6>
+                                               <p>
+                                                  need Volunteer Activities
+                                               </p>
+                                            </div>
+                                         </div>
+                                         <div class="activity_info">
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            <div>
+                                               <h6 class="fw_600">
+                                                  22 Nov
+                                               </h6>
+                                               <p>
+                                                  need Volunteer Activities
+                                               </p>
+                                            </div>
+                                         </div>
+                                         <a href="">
+                                         Read more
+                                         </a>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="container-fluid ">
+                                <div class="row">
+                                   <div class="col-md-9 col_Y-padding">
+                                      <div class="city_social-box h-100">
+                                         <div class="top_city-box">
+                                            <h5 class="fw_600">
+                                               Top Attendance
+                                            </h5>
+                                            <div class="tab-content">
+                                               <div role="tabpanel" class="tab-pane fade in active show" id="lineChartOneTab">
+                                                  <div class="chart-container">
+                                                     <canvas id="lineChartOne" class="line_Chart_Canvas"></canvas>
+                                                  </div>
+                                               </div>
+                                               <div role="tabpanel" class="tab-pane fade" id="lineChartTwoTab">
+                                                  <div class="chart-container">
+                                                     <canvas id="lineChartTwo" class="line_Chart_Canvas"></canvas>
+                                                  </div>
+                                               </div>
+                                               <div role="tabpanel" class="tab-pane fade " id="lineChartThreeTab">
+                                                  <div class="chart-container">
+                                                     <canvas id="lineChartThree" class="line_Chart_Canvas"></canvas>
+                                                  </div>
+                                               </div>
+                                            </div>
+                                            <ul id="lineNavTabs" class="nav nav-tabs" role="tablist">
+                                               <li ><a href="#lineChartOneTab" class="active" role="tab"
+                                                  data-toggle="tab"> class1</a></li>
+                                               <li ><a href="#lineChartTwoTab" > class2</a>
+                                               </li>
+                                               <li ><a href="#lineChartThreeTab" >class3
+                                                  </a>
+                                               </li>
+                                            </ul>
+                                         </div>
+                                         <div class="social_container">
+                                            <div class="socail_fl">
+                                               <h5 class="fw_600">
+                                                  Social Source
+                                               </h5>
+                                               <div class="social_box">
+                                                  <a href="">
+                                                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                                                  <span>
+                                                  Facebook
+                                                  </span>
+                                                  </a>
+                                                  <a href="">
+                                                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                                  <span>
+                                                  Instagram
+                                                  </span>
+                                                  </a>
+                                                  <a href="">
+                                                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                                                  <span>
+                                                  Twitter
+                                                  </span>
+                                                  </a>
+                                                  <a href="">
+                                                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                                  <span>
+                                                  Linkdin
+                                                  </span>
+                                                  </a>
+                                               </div>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </div>
+                                   <div class="col-md-3 col_Y-padding">
+                                      <div class="transaction_box h-100">
+                                         <h5 class="fw_600">
+                                            Latest Attendance condonations
+                                         </h5>
+                                         <div class="transaction_info">
+                                            <div class="icon-box">
+                                               <i class="fa fa-check" aria-hidden="true"></i>
+                                            </div>
+                                            <div>
+                                               <h6>
+                                                  08 Oct 2020
+                                               </h6>
+                                               <h6>
+                                                  400 Paid
+                                               </h6>
+                                            </div>
+                                         </div>
+                                         <div class="transaction_info">
+                                            <div class="icon-box">
+                                               <i class="fa fa-check" aria-hidden="true"></i>
+                                            </div>
+                                            <div>
+                                               <h6>
+                                                  06 Oct 2020
+                                               </h6>
+                                               <h6>
+                                                  384 Paid
+                                               </h6>
+                                            </div>
+                                         </div>
+                                         <div class="transaction_info">
+                                            <div class="icon-box">
+                                               <i class="fa fa-check" aria-hidden="true"></i>
+                                            </div>
+                                            <div>
+                                               <h6>
+                                                  10 Oct 2020
+                                               </h6>
+                                               <h6>
+                                                  412 Paid
+                                               </h6>
+                                            </div>
+                                         </div>
+                                         <a href="">
+                                         View More
+                                         </a>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <!-- footer section -->
+        <section class="footer_section">
+           <div class="container">
+              <p>
+                 &copy; <span id="displayYear"></span> All Rights Reserved By
+                 <a href="https://html.design/">Free Html Templates</a>
+              </p>
+           </div>
+        </section>
+        <!-- footer section -->
+        <!-- jQery -->
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+        <!-- bootstrap js -->
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <!-- chart js -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <!-- custom js -->
+        <script type="text/javascript" src="js/custom.js"></script>
+        <!-- Google Map -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+        <!-- End Google Map -->
+         
+     </body>
+  </html>
+
+    
+  

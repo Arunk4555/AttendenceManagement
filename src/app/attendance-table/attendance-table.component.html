@@ -1,0 +1,104 @@
+<html>
+   <head></head>
+   <body>
+
+<header class="header_section">
+  <div class="container-fluid">
+     <nav class="navbar navbar-expand-lg custom_nav-container ">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""> </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <div class="navbar_inner-nav">
+              <div class="nav_form">
+                 
+              </div>
+              <ul class="navbar-nav nav nav-tabs " id="headerNavTabs" role="tablist">
+               
+                 <li class="nav-item" >
+                    <a class="nav-link active"  href=" " routerLink="/attendence1" routerLinkActive="active">Dashboard <span
+                       class="sr-only">(current)</span></a>
+                 </li>
+                 <li class="nav-item" >
+                   <a class="nav-link" href=" "  routerLink="/addattendence" >Add Attendance</a>
+                 </li>
+                 <li class="nav-item" >
+                    <a class="nav-link" href=" " routerLink="/attendencetable" routerLinkActive="active">Attendance Table</a>
+                 </li>
+                 <li class="nav-item" >
+                    <a class="nav-link" href="" routerLink="/exportattendance" routerLinkActive="active">Export Attendance</a>
+                 </li>
+                 
+                 
+                 
+              </ul>
+           </div>
+        </div>
+        <div class="quote_btn-container">
+           <div class="lang_box dropdown">
+              
+              
+              
+           </div>
+           
+           <a href="" class="notification_link">
+           <i class="fa fa-bell" aria-hidden="true"></i>
+          
+           </a>
+           <div class="dropdown">
+              <a href="" class="user_link" data-toggle="dropdown" aria-expanded="true">
+                 <div class="user_icon">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                 </div>
+                 
+                 <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">
+              Profile
+              </a>
+              <a href="#" class="dropdown-item">
+              Settings
+              </a>
+              <a href="#" class="dropdown-item">
+              Sign Out
+              </a>
+              </div>
+              </a>
+           </div>
+        </div>
+     </nav>
+  </div>
+</header>
+
+
+
+<div class="tab">
+  <div class="attendance-section table-section">
+  <h2>Attendance Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Present</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of attendanceData">
+        <td >{{ item.name }}</td>
+        <td >{{ item.date }}</td>
+        <td >{{ item.present ? 'Yes' : 'No' }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+

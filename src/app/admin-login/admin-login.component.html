@@ -1,0 +1,55 @@
+<p>admin-login works!</p>
+
+  
+
+
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+
+    
+    
+
+  </nav>
+
+  <div class="admin-page">
+  <div class="container">
+
+    <div class="row">
+
+
+        <div class="col-md-6">
+            <div class="card">
+
+                <div class="text-center">
+                    <h1>Login As Admin</h1>
+                    <h6>Please enter your Username & Password</h6>
+
+                </div>
+                <form>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label"><h4>Employeename</h4></label>
+                        <input type="text" name="username" [(ngModel)]="username" class="form-control" id="formGroupExampleInput" placeholder="User name" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label"><h4>Password</h4></label>
+                        <input type="password" name="password" [(ngModel)]="password" class="form-control" id="formGroupExampleInput2" placeholder="Password" required>
+                      </div>
+                      <div class="d-grid gap-2 d-md-block">
+
+                        <button (click)=checkadminLogin() style="margin: 5px;"  class="btn btn-success" type="button">Login</button>
+
+                        <button style="margin: 5px;" class="btn btn-warning" type="button" routerLink="">Cancel</button>
+                      </div>
+
+                </form>
+
+
+<router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+   
+
+   

@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image</title>
+    
+</head>
+<body>
+
+<div class="whole background"></div>
+<header class="header_section">
+  <div class="container-fluid">
+     <nav class="navbar navbar-expand-lg custom_nav-container ">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""> </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <div class="navbar_inner-nav">
+              <div class="nav_form">
+                 
+              </div>
+              <ul class="navbar-nav nav nav-tabs " id="headerNavTabs" role="tablist">
+                 <li class="nav-item" >
+                    <a class="nav-link active"  href=" " routerLink="" routerLinkActive="active">Home <span
+                       class="sr-only">(current)</span></a>
+                 </li>
+                 
+                 
+                 <li class="nav-item" >
+                    <a class="nav-link" href="" routerLink="/exportattendance" routerLinkActive="active">Export Attendance</a>
+                 </li>
+                 
+                 
+              </ul>
+           </div>
+        </div>
+        <div class="quote_btn-container">
+           <div class="lang_box dropdown">
+              
+              
+           </div>
+           
+           
+           <div class="dropdown">
+              <a href="" class="user_link" data-toggle="dropdown" aria-expanded="true">
+                 <div class="user_icon">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                 </div>
+                 
+                 <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">
+              Profile
+              </a>
+              <a href="#" class="dropdown-item">
+              Settings
+              </a>
+              <a href="#" class="dropdown-item">
+              Sign Out
+              </a>
+              </div>
+              </a>
+           </div>
+        </div>
+     </nav>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+<div class="export-container">
+  <div class="attendance-section export-section">
+  <h2>Export Attendance</h2>
+  <form (ngSubmit)="onExport()">
+    <div>
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" [(ngModel)]="startDate" name="startDate" required>
+    </div>
+    <div>
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" [(ngModel)]="endDate" name="endDate" required>
+    </div>
+    <button type="submit">Export to Excel</button>
+  </form>
+  </div>
+</div>
+</body>
+</html>
+
